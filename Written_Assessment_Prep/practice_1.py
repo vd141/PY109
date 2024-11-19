@@ -1,0 +1,3 @@
+'''
+Practice problem 1
+'''

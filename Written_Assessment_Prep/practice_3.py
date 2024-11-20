@@ -1,18 +1,16 @@
 '''
-Practice problem 3: What does the following code do and why?
+Practice problem 2: What does the following code do and why?
 '''
 
-a = "Hello"
+hello = "Hello, world!"
 
-if a:
-    print("Hello is truthy")
-else:
-    print("Hello is falsy")
+def my_func():
+    print(hello)
 
+my_func()
 
-''' First attempt: 00:01:40
-variable a is assigned to the value of "Hello". Variable a is truthy because it is a nonempty string
-Therefore, it passes the if statement condition on line 7.
-Python prints the string "Hello is truthy"
-Because the if body executed, Python does not run the body of the else statement
+''' First attempt - 00:01:15
+The variable hello is assigned to the value of 'Hello, world!'. It exists in the global scope
+A function is designed to print the value of hello from the global scope
+the function is invoked, printing the value of hello: 'Hello, world!'
 '''

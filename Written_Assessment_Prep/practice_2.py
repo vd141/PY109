@@ -1,16 +1,23 @@
 '''
-Practice problem 2: What does the following code do and why?
+Practice problem 1: What does this code print and why?
 '''
 
-hello = "Hello, world!"
+def replace(string, value):
+    while True:
+        break
 
-def my_func():
-    print(hello)
+    string = value
 
-my_func()
+greet = 'Hey!'
+replace(greet, 'Hello')
+print(greet)
 
-''' First attempt - 00:01:15
-The variable hello is assigned to the value of 'Hello, world!'. It exists in the global scope
-A function is designed to print the value of hello from the global scope
-the function is invoked, printing the value of hello: 'Hello, world!'
+''' First attempt at explanation
+On line 11, greet is a variable that is assigned to the value of 'Hey!' in the global scope.
+On line 12, the replace function is called, which takes the value pointed to by greet and 'Hello' as arguments
+    In the replace function, the while loop does not affect the values
+    In the final line of the function, the local variable string is assigned to the value of the value variable: 'Hello!'
+    However, the local variable string is not accessible in the outer scope. And it also does not reassign greet because greet is an immutable data type (string)
+    Line 12 ultimately does not affect anything in the global scope
+On line 13, Python prints 'Hey!', taking the value that greet points to in the global scope
 '''

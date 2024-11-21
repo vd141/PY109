@@ -76,3 +76,23 @@ function
 
 '''
 
+'''
+What does this print and why? What concept does this cover? How could you
+refactor this to remove the space?
+'''
+print(2 + 3 * 4, 4 * (3 + 2))
+'''
+this will print 14 20. the comma separates different expressions inside the 
+print function
+
+This can be refactored to remove the space by interpolating the expressions in
+a Python f string
+print(f'{2 + 3 * 4}{4 * (3 + 2)}') 
+
+another way of removing the space is to specify the sep= parameter to be an 
+empty string ''
+
+the main concept here is operator precedence and the use of commas to separate 
+print expressions
+'''
+

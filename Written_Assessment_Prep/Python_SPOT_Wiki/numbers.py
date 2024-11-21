@@ -96,3 +96,10 @@ the main concept here is operator precedence and the use of commas to separate
 print expressions
 '''
 
+'''
+What can be used in place of commas to make this more readable?
+'''
+print(123112940)
+'''
+The use of underscores between groupings of numbers: print(123_456_789)
+'''

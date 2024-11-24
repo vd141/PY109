@@ -158,7 +158,12 @@ if name.isupper():
 else:
     print("world")
 '''
+the conditional statement checks if all the charactes in the string that is
+assigned to the variable name are uppercase. True if so, False if otherwise
+If the conditional statement returns true, Python prints world in all uppercase
+and world in all lowercase if otherwise
 
+This code willp print "WORLD"
 '''
 
 '''
@@ -180,5 +185,131 @@ punctuation_type(str1)
 punctuation_type(str2)
 punctuation_type(str3)
 '''
+The function takes a string as an argument and evaluates the returned value of
+string's upper method. the if conditional checks for Truthy or Falsy values.
+the str.upper() method returns a fully uppercase instance of its parent object.
+regardless of the case of the values themselves, the value returned by str.upper()
+will be Truthy if it is a nonempty string and Falsy otherwise
 
+For each of the values pointed to by str1, str2, and str3, the conditional will
+evaluate them as Truthy
+
+The function invocations will print 'This is all caps' three times
+'''
+
+'''
+What do these print and why?
+'''
+str1 = "    "
+str2 = "  Hello   "
+str3 = "Hello World"
+
+print(str1.isspace())
+print(str2.isspace())
+print(str3.isspace())
+
+sentence = "Hello     World!   How are you?   "
+word_count = sum(1 for word in sentence.split() if word.isspace())
+print("Number of words in the sentence:", word_count)
+'''
+the isspace() method checks if all of the characters in the string are spaces.
+If there are non space characters in the string, the method will return False.
+It will return True if otherwise
+
+The code will print True, False, False
+
+word_count stores the value that sum() returns from its argument. sum()'s argument
+is a generator object that is created as a result of the generator expression
+'''
+
+'''
+What do these print and why?
+'''
+s = "   Hello, World!   "
+print(s.strip())
+print(s.strip(" !"))
+'''
+the strip method returns a string without leading or trailing whitespace
+when strip is given arguments, it removes the leading and trailing characters in
+that string
+'''
+
+'''
+What do these print and why?
+'''
+s = "www.example.com"
+print(s.lstrip('wcmo.'))
+'''
+the lstrip method removes the leading whitespace characters from the string.
+in this case, it removes the characters 'w' and '.'
+
+'c', 'm', 'o' are not removed from the s string because they are not leading
+characters in the string
+'''
+
+'''
+What do these print and why?
+'''
+s = 'impatient'
+print(s.rstrip('tp'))
+print(s.rstrip('p'))
+'''
+the argument of the first print statement is the return value of s''s rtsrip
+method. the rstrip method removes the characters 't' and 'p' from the string, if
+they are trailing characters
+
+the second print statement prints the return value of the rstrip method when the
+trailing p characters are removed
+
+# impatien
+# impatient
+'''
+
+'''
+What do these print and why?
+'''
+s = "Hello, World!"
+print(s.replace("Hello", "Hi"))
+print(s.replace("o", "0"))
+'''
+the first print statement prints the returned value of the s string's replace 
+method. the method invocation replaces "Hello" in the s strign with "Hi"
+
+the second print statement prints the returned value of the s sting's replace
+method. the method invocation replaces all 'o' characters in the s string with
+a '0'
+
+# Hi, World!
+# Hell0, W0rld!
+'''
+
+'''
+What do these print and why?
+'''
+sentence = "This is a sample sentence."
+words = sentence.split()
+print(words)
+
+csv_data = "John,Doe,30,New York"
+fields = csv_data.split(",")
+print(fields)
+
+sentence = "This is a sample sentence."
+words = sentence.split(maxsplit=2)
+print(words)
+'''
+sentence is a variable that is assigned to the value of the string literal
+words is assigned to the returned value of sentence's split method. the split 
+string method returns a list of all strings separated by spaces in the original
+string
+
+when the split method is given a string argument, it returns a list of all strings sep
+arated by the argument's value
+
+when the split method is given an explicit maxsplit value, it performs a maximum
+of that many splits, from left to right of the parent string
+
+# ['This', 'is', 'a', 'sample', 'sentence']
+# ['John', 'Doe', '30', 'New York']
+# ['This', 'is', 'a sample sentence']
 '''

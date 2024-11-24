@@ -2,6 +2,13 @@
 Interview: likely no code will be needed. All about verbalizing concepts. Not 
 able to test code either. Very similar written exams in terms of difficulty.
 Interviews are 30 minutes with 5 questions
+
+Will points be deducted in interviews if we don't answer the question fully the
+first time? Will the interviewer prompt us to answer the whole question if we 
+only answer part of it? Interviewer will prompt
+
+In written exams, be sure you answer the whole question! This is a common 
+pitfall
 '''
 
 '''
@@ -115,3 +122,32 @@ if lst2:
     print(1, lst2)
 else:
     print(2, lst1)
+
+# def shout(text):
+#     global exclamation_marks
+#     exclamation_marks = '!!!'
+#     return text.upper() + exclamation_marks
+
+# print(shout('hello') + exclamation_marks)
+
+###########################################
+greeting = "Hello"
+
+def greet(greeting):
+    greeting += " world"
+    print(greeting)
+
+greet(greeting)
+print(greeting)
+# talk about shadowing!
+
+##############################################
+text = 'Hello! I am Eloise.'
+
+def swap(s):
+    for char in s:
+        s.replace(char, char.upper())
+    return s
+
+print(swap(text))
+print(text)

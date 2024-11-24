@@ -94,5 +94,84 @@ b = 20
 print(a < b < 30)
 print(a > b or b == 20)
 '''
+the first print statement prints out the returned value of the expression 
+a < b < 30. This statement evaluates if b is greater than a and less than 30. 
+Because the value of b (20) is greater than that of a (10) and less than 30, this
+expression evaluates as True. Therefore, True is printed to the console.
+# True
+
+
+In the second print statement, the returned value of a > b or b == 20 is printed.
+the operands are more tightly bound to the inequality operator than the or operator.
+So a > b is evaluated first. the value of a is not greater than b, so a > b evaluates
+to False. This makes the first operand of the or operator False. Because it is false,
+the right hand side of the or operator is now evaluated. b == 20 is evaluated. This is True,
+so the right hand side of the or operator evaluates to True. Because only one of the
+operands of the or operator needs to be True for the or operation to return True, 
+the entire expression that is evaluated as a print function argument returns a True.
+Therefore, Python will print True for the second line.
+# True
+'''
+
+
+'''
+What do these print and why?
+'''
+my_list = [1, 2, 3, 4, 5]
+print(3 in my_list)
+print(6 not in my_list)
+'''
+The expression 3 in my_list returns True if 3 is an element of my_list. 3 is indeed an
+element of my_list, so the first print statement prints True
+# True
+
+The expression 6 not in my_list returns True if 6 is not an element in my_list.
+6 is indeed not an element in my_list, so therefore the second print statement prints
+True
+# True
+'''
+
+'''
+What do these print and why?
+'''
+temperature = 25
+time_of_day = "morning"
+
+if temperature < 30 and (time_of_day == "morning" or time_of_day == "afternoon"):
+    print("It's a pleasant day!")
+else:
+    print("It's either too hot or not the right time of day.")
+'''
+If the expression inside the if statement evaluates as True, then the body of the if statement
+will run. The body of the else statement will not run.
+
+If the expression inside the if statement evaluates as False, then the body of the if statement
+is not run. The body of the else statement will be run.
+
+In the if statement's expression, the operands of the < operator are more tightly bound to it than
+to the and operator. So temperature < 30 is evaluated first. This evaluates as True. The first operand
+of the and statement is therefore True. The second operand of the and statement is the 
+expression inside the parentheses. The operands of the equality operators are more tighly bound to them
+than to the or operator. time_of_day == "morning" is evaluated as True. Since the or operator only requires
+one of its operands to be True in order to return True, the or expression short circuits and returns True
+Both of the operands of the and operator are True. So the body of the if statement will run.
+# It's a pleasant day!
+'''
+
+
+'''
+What does this print and why?
+'''
+num = 12
+
+if num / 3 < 3 and num > 10:
+    print("Hello")
+elif num >= 8 and num < 6 or num > 4 and num < 16:
+    print("Hello 2")
+elif num % 4 == 0 or num < 7 and num < 10:
+    print("Hello 3")
+else:
+    print("Buy")
+'''
 
 '''

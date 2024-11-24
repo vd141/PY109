@@ -173,5 +173,28 @@ elif num % 4 == 0 or num < 7 and num < 10:
 else:
     print("Buy")
 '''
+python will evaluate the if statement first. If the statement evaluates as True,
+then the if body will run. All other elif and else bodies will be skipped. 
 
+The first if statement evaluates as False because 12 / 3 (4.0) is greater than
+3. Therefore, the right operand of the and operator evaluates as False. The and
+operator is short-circuited in this case (no other operands of the and operator
+are evaluated). Because the first if statement evaluates to False, Python moves 
+on to evaluate the first elif statement. 
+
+Python evaluates logical/inequality operators from left to right when the operators
+share the same level of precedence. Inequality operators have a higher precedence
+than logical operators. Therefore, the operands of inequality operators are more tightly 
+bound to them than to logical operands.
+Operands are more tighly bound to inequality operators, so num >= 8 is evaluated
+first. This is evaluated as True because 12 is indeed greater than 8. The right
+side of the and operator (num < 6) evaluates as False because 12 is greater than
+6. Therefore, the entire and statement (num >= 8 and num < 6) is evaluated as False.
+This then becomes the operand of the or operator. Because the first operand evaluates as 
+False, Python evaluates the right side of the or operator (num > 4). This operator evaluates as True,
+so the returned value of the or operator is True. That makes the left operand of the final logical operator
+(and) True. Python then evaluates the right operand of the and operator (n < 16). This also evaluates to True.
+Because both sides of the and operator evaluate to True, the entire elif statement evaluates to True. Python runs the
+code inside this first elif block. 
+# Hello 2
 '''

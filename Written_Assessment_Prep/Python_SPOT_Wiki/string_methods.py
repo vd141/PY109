@@ -313,3 +313,19 @@ of that many splits, from left to right of the parent string
 # ['John', 'Doe', '30', 'New York']
 # ['This', 'is', 'a sample sentence']
 '''
+
+'''
+What does this print and why?
+'''
+str1 = "hello world"
+str2 = str1.capitalize()
+print("Original string:", str1)
+print("Capitalized string:", str2)
+'''
+the string method capitalize() returns a string where the element at index 0 of 
+the string is capitalized. All remaining characters are lowercase
+
+this code prints
+# Original string: hello world
+# Capitalized string: Hello world
+'''

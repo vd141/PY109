@@ -74,5 +74,111 @@ print(s7.isalpha())
 words = ["apple", "banana", "cherry"]
 print(all(word.isalpha() for word in words))
 '''
+isalpha is a string method that returns True if all the characters in the string 
+are alphabetical and False otherwise. alpha returns a boolean
+
+s1: True
+s2: False
+s3: False
+s4: False
+s5: False
+s6: False # True because japanese characters count as Lo (other letters) in the
+unicode class. isalpha returns true when all characters are part of Lo, Lt, Lu,
+Ll, and Lm classes
+s7: True
+all(word): True
+'''
+
+'''
+What does this print and why?
+'''
+string1 = "HelloWorld"
+string2 = "12345"
+string3 = "Hello World"
+
+result1 = string1.isalpha()
+result2 = string2.isalpha()
+result3 = string3.isalpha()
+
+print("Is '{}' alphabetic?".format(string1), result1)
+print("Is '{}' alphabetic?".format(string2), result2)
+print("Is '{}' alphabetic?".format(string3), result3)
+'''
+# True. All characters are alphabetic
+# False. These are numeric characters, not alphabetic ones
+# False. Spaces are not alphabetical
+
+The print statements use the value returned by the string method to print the
+string to the console. The format method interpolates its argument inside of the
+braces in the string. Arguments separated by a comma are by default separated by
+a space in the printed string
+'''
+
+'''
+What do these print and why?
+'''
+s1 = "123abc"
+print(s1.isdigit())
+s2 = "123$%^"
+print(s2.isdigit())
+s3 = ""
+print(s3.isdigit())
+s4 = "12345"
+print(s4.isdigit())
+'''
+# False. characters 'abc' are not digits
+# False: the speical characters '$%^' are not digits
+# False: empty strings are not digits
+# True: all of the characters in the string are digits
+'''
+
+'''
+What do these print and why?
+'''
+print("Hello World".isalnum())
+print("Hello@World".isalnum())
+print("".isalnum())
+print("Hello123".isalnum())
+'''
+isalnum returns true if all characters are alphabetic or numeric and False
+otherwise
+# False: spaces are not alphabetic or numeric
+# False: @ is not alphabetic or numeric
+# False: Empty strings are not alphabetic or numeric
+# True: all characters are alphanumeric
+'''
+
+'''
+What do these print and why?
+'''
+name = 'HELLO'
+
+if name.isupper():
+    print("WORLD")
+else:
+    print("world")
+'''
+
+'''
+
+'''
+8. What do these print and why?
+'''
+def punctuation_type(str):
+    if str.upper():
+        print('This is all caps')
+    elif str.lower():
+        print('This is all lowercase')
+    else:
+        print('Neither')
+
+str1 = 'HELLO'
+str2 = 'yolo'
+str3 = 'My Name Is: '
+
+punctuation_type(str1)
+punctuation_type(str2)
+punctuation_type(str3)
+'''
 
 '''

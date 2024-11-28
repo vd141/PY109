@@ -47,3 +47,7 @@ Are integers and floats literals?
 
 Yes
 '''
+
+'''
+What does the reversed function do?
+'''

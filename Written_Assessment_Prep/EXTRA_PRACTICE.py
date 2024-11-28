@@ -266,3 +266,12 @@ def is_color_valid(color):
     else:
         return False
     
+'''
+list comprehension
+ternary expression
+'''
+
+# modify the 2-5 elements of the seq
+seq = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+letters = ['a', 'b', 'c', 'd']
+seq[1:5] = letters

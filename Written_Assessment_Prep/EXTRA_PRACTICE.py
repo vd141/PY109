@@ -3,12 +3,17 @@ Interview: likely no code will be needed. All about verbalizing concepts. Not
 able to test code either. Very similar written exams in terms of difficulty.
 Interviews are 30 minutes with 5 questions
 
+If the question asks for the concept being demonstrated, explicitly say what it is. (answer the question)
+
+
 Will points be deducted in interviews if we don't answer the question fully the
 first time? Will the interviewer prompt us to answer the whole question if we 
 only answer part of it? Interviewer will prompt
 
 In written exams, be sure you answer the whole question! This is a common 
-pitfall
+pitfall.
+
+In the interview
 '''
 
 '''
@@ -151,3 +156,113 @@ def swap(s):
 
 print(swap(text))
 print(text)
+# string immutability is the concept here
+
+# new problem
+letters = ['a', 'b', 'c', 'd']
+
+def reverse_list1(lst):
+    return lst[::-1]
+
+def reverse_list2(lst):
+    return lst.reverse()
+
+reverse_list1(letters) # ?
+reverse_list2(letters) # ?
+
+
+# what is happening here? What concept is being demonstrated?
+text = 'Hello! I am helen.'
+
+def swap(s):
+    for char in s:
+        text = s.replace(char, char.upper())
+    return text
+
+print(swap(text))
+print(text)
+
+# what is happening here? what concept is being demonstrated?
+greeting = ["Hello"]
+
+def greet():
+    greeting += ["world"]
+    print(greeting)
+
+greet()
+print(greeting)
+
+
+# what is happening here? What concept is being demonstrated?
+players = [
+  {'name': "Joe", 'age': 25},
+  {'name': "Andy", 'age': 31},
+  {'name': "Ralph", 'age': 18},
+  {'name': "Mark", 'age': 28},
+]
+
+player = players[0]
+# print(player)
+player = 25
+print(players)
+
+players[0]['age'] # 25
+new_list = []
+
+for player in players:
+    # new_list.append(player['age'])
+    player = player['age']
+
+
+# print(players)
+
+'''
+what are two ways to check if an object is a certain type?
+'''
+
+'''
+how do we center the following title in a 40-character wide table
+'''
+title = "Flintstone Family Members"
+
+'''
+Two ways to determine whether a dict contains a key?
+'''
+
+'''
+given these two dicts, how do we update ages with the entries in additional_ages
+
+ages = {'Herman': 32, 'Lily': 30, 'Grandpa': 5843, 'Eddie': 10}
+additional_ages = {'Marilyn': 22, 'Spot': 237}
+'''
+
+'''
+what are three ways to remove all of the elements from a list?
+'''
+
+'''
+What will the following code output?
+'''
+print([1,2,3] + [4,5])
+
+'''
+What will the following code output?
+'''
+my_list1 = [{"first": "value1"}, {"second": "value2"}, 3, 4, 5]
+my_list2 = my_list1.copy()
+my_list2[0]['first'] = 42
+print(my_list1)
+
+
+
+'''
+the following function unecessarily uses two return statements to return boolean
+values. can you rewrite this function so that it only has one return statement and 
+does not explicitly use either True or False?
+'''
+def is_color_valid(color):
+    if color == "blue" or color == "green":
+        return True
+    else:
+        return False
+    

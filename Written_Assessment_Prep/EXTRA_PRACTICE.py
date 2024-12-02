@@ -275,3 +275,28 @@ ternary expression
 seq = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 letters = ['a', 'b', 'c', 'd']
 seq[1:5] = letters
+
+'''
+One day, Spot was playing with the Munster family's home computer, and he wrote
+a small program to mess with their dmeographic data:
+'''
+munsters = {
+    "Herman": {"age": 32, "gender": "male"},
+    "Lily": {"age": 30, "gender": "female"},
+    "Grandpa": {"age": 402, "gender": "male"},
+    "Eddie": {"age": 10, "gender": "male"},
+    "Marilyn": {"age": 23, "gender": "female"},
+}
+
+def mess_with_demographics(demo_dict):
+    for key, value in demo_dict.items():
+        value["age"] += 42
+        value["gender"] = "other"
+'''
+After writing the function, he typed the following code:
+'''
+mess_with_demographics(munsters)
+
+'''
+What happened to the family's data?
+'''

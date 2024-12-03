@@ -107,9 +107,8 @@ logical: and, or, not
 '''
 
 '''
-evaluates as true vs. truthy
-We say turthy variables evaluate as True
-we say falsy variables evaluate as False
+evaluates as truthy -> all truthy things
+evaluates as falsy -> all falsy things
 
 we refer to the things on both sides of a comparison operator as operands, not
 arguments
@@ -289,6 +288,30 @@ letters = ['a', 'b', 'c', 'd']
 seq[1:5] = letters
 
 '''
+One day, Spot was playing with the Munster family's home computer, and he wrote
+a small program to mess with their dmeographic data:
+'''
+munsters = {
+    "Herman": {"age": 32, "gender": "male"},
+    "Lily": {"age": 30, "gender": "female"},
+    "Grandpa": {"age": 402, "gender": "male"},
+    "Eddie": {"age": 10, "gender": "male"},
+    "Marilyn": {"age": 23, "gender": "female"},
+}
+
+def mess_with_demographics(demo_dict):
+    for key, value in demo_dict.items():
+        value["age"] += 42
+        value["gender"] = "other"
+'''
+After writing the function, he typed the following code:
+'''
+mess_with_demographics(munsters)
+
+'''
+What happened to the family's data?
+'''
+'''
 What is interning?
 '''
 
@@ -375,4 +398,28 @@ line of the code below?
 if False:
     greeting = "hello world"
 
-print(greeting)
+print(greeting)=======
+'''
+One day, Spot was playing with the Munster family's home computer, and he wrote
+a small program to mess with their dmeographic data:
+'''
+munsters = {
+    "Herman": {"age": 32, "gender": "male"},
+    "Lily": {"age": 30, "gender": "female"},
+    "Grandpa": {"age": 402, "gender": "male"},
+    "Eddie": {"age": 10, "gender": "male"},
+    "Marilyn": {"age": 23, "gender": "female"},
+}
+
+def mess_with_demographics(demo_dict):
+    for key, value in demo_dict.items():
+        value["age"] += 42
+        value["gender"] = "other"
+'''
+After writing the function, he typed the following code:
+'''
+mess_with_demographics(munsters)
+
+'''
+What happened to the family's data?
+'''

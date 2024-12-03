@@ -28,6 +28,9 @@ print(f"Today is the {day} of {month}")
 Line 7 is a call to a print function, which is taking an f-string. An f-string 
 allows string interpolation by coercing the value of the expression/variable in 
 braces into a string
+
+the input string is being explicitly coerced by the int() function. the f-string
+in the print function is implicitly coercing the day value into a string
 '''
 
 '''
@@ -90,14 +93,23 @@ add_player function
 
 '''
 Know how to point out arguments and parameters in code
+
+arguments are the objects that are passed into a function's inputs. parameters
+are the placeholders that reference those arguments. parameters are considered
+local variables in a function
 '''
 
 '''
 Make a distinction between inequality and comparison operator
+inequality: !=, equality: =
+comparison: >=, >, <=, <, !=, ==
+logical: and, or, not
 '''
 
 '''
 evaluates as true vs. truthy
+We say turthy variables evaluate as True
+we say falsy variables evaluate as False
 
 we refer to the things on both sides of a comparison operator as operands, not
 arguments
@@ -275,3 +287,92 @@ ternary expression
 seq = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 letters = ['a', 'b', 'c', 'd']
 seq[1:5] = letters
+
+'''
+What is interning?
+'''
+
+'''
+What does the last line in the following code output?
+'''
+
+dictionary = {'first': [1]}
+num_list = dictionary['first']
+num_list.append(2)
+
+print(num_list)
+print(dictionary)
+
+'''
+num_list is a reference to a list in dictionary. using the append method mutates
+this list, because list is a mutable object
+
+list: [1, 2]
+dictionary: {'first': [1, 2]}
+
+
+How would we modify num_list but not dictionary? (2 ways)
+'''
+
+
+'''
+What does each code snippet print?
+'''
+
+#1 
+def mess_with_vars(one, two, three):
+    one = two
+    two = three
+    three = one
+
+one = ["one"]
+two = ["two"]
+three = ["three"]
+
+mess_with_vars(one, two, three)
+
+print(f"one is: {one}")
+print(f"two is: {two}")
+print(f"three is: {three}")
+
+#2
+def mess_with_vars(one, two, three):
+    one = ["two"]
+    two = ["three"]
+    three = ["one"]
+
+one = ["one"]
+two = ["two"]
+three = ["three"]
+
+mess_with_vars(one, two, three)
+
+print(f"one is: {one}")
+print(f"two is: {two}")
+print(f"three is: {three}")
+
+
+#3
+def mess_with_vars(one, two, three):
+    one[0] = "two"
+    two[0] = "three"
+    three[0] = "one"
+
+one = ["one"]
+two = ["two"]
+three = ["three"]
+
+mess_with_vars(one, two, three)
+
+print(f"one is: {one}")
+print(f"two is: {two}")
+print(f"three is: {three}")
+
+'''
+What do you expect to happen when the greeting variable is referenced in the last
+line of the code below?
+'''
+if False:
+    greeting = "hello world"
+
+print(greeting)

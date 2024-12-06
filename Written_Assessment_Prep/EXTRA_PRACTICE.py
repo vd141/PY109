@@ -229,15 +229,20 @@ for player in players:
 
 '''
 what are two ways to check if an object is a certain type?
+
+type()
+isinstance(object, object type)
 '''
 
 '''
 how do we center the following title in a 40-character wide table
 '''
 title = "Flintstone Family Members"
-
+title.center(40)
 '''
 Two ways to determine whether a dict contains a key?
+dict.get()
+key in dict
 '''
 
 '''
@@ -245,10 +250,15 @@ given these two dicts, how do we update ages with the entries in additional_ages
 
 ages = {'Herman': 32, 'Lily': 30, 'Grandpa': 5843, 'Eddie': 10}
 additional_ages = {'Marilyn': 22, 'Spot': 237}
+
+ages += additional_ages
 '''
 
 '''
 what are three ways to remove all of the elements from a list?
+list.clear()
+list.pop() (list length times)
+del(list[index])
 '''
 
 '''
@@ -256,6 +266,7 @@ What will the following code output?
 '''
 print([1,2,3] + [4,5])
 
+# [1, 2, 3, 4, 5]
 '''
 What will the following code output?
 '''
